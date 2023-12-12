@@ -1,0 +1,9 @@
+num=float(input("Enter any number: "))
+print("*"*50)
+if(num==0 or num==1):
+    print("Please enter numbers except 0 and 1 ")
+if(num%2==0):
+    print("This is Even Number")
+if(num%2!=0):
+    print("This is Odd Number")
+print("*"*50)
