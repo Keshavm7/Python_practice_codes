@@ -1,0 +1,10 @@
+# Program for accepting two numerical values and find biggest among them by simple if statment
+val1= float(input("Enter value1: "))
+val2= float(input("Enter value2: "))
+if(val1>val2):
+    print("The biggest of {} and {} is {}".format(val1,val2,val1))
+if(val2>val1):
+    print("The Biggest of {} and {} is {}".format(val1,val2,val2))
+if(val1==val2):
+    print("Both Vales are equal")
+print("program Executed")
