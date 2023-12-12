@@ -1,0 +1,11 @@
+# write a program which will accept any numerical value and decide whether it is positive or negative or zero by simple if statement
+a= float(input("Enter any value: "))
+print("*"*50)
+if(a>0):
+    print("The Given value {} is positive".format(a))
+if(a<0):
+    print("The Given Value {} is Negative".format(a))
+if(a==0):
+    print("The Given Value {} is Zero".format(a))
+print("*"*50)
+
