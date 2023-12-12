@@ -1,0 +1,8 @@
+# write a program which accept any number and decide whether it is even or odd
+num=float(input("Enter any number: "))
+print("*"*50)
+if(num%2==0):
+    print("This is Even Number")
+if(num%2!=0):
+    print("This is Odd Number")
+print("*"*50)
