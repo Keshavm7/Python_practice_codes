@@ -1,0 +1,10 @@
+# program for accepting two numerical values and deciding which is smallest among them and checking for equality among them
+val1=float(input("Enter value1: "))
+val2=float(input("Enter value2: "))
+if(val1<val2):
+    print("The smallest of {} and {} is {}".format(val1,val2,val1))
+if(val2<val1):
+    print("The smallest of {} and {} is {}".format(val1,val2,val2))
+if(val1==val2):
+    print("Both values are equal")
+    
