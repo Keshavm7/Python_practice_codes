@@ -2,16 +2,6 @@ import numpy as np
 import pandas as pd
 a=pd.Series()
 
-Warning (from warnings module):
-  File "<pyshell#2>", line 1
-FutureWarning: The default dtype for empty Series will be 'object' instead of 'float64' in a future version. Specify a dtype explicitly to silence this warning.
-print(a)
-Series([], dtype: float64)
-s=pd.Series([10,20,30,40],dtype=float64)
-Traceback (most recent call last):
-  File "<pyshell#4>", line 1, in <module>
-    s=pd.Series([10,20,30,40],dtype=float64)
-NameError: name 'float64' is not defined. Did you mean: 'float'?
 s=pd.Series([10,20,30,40],dtype="float64")
 print(s)
 0    10.0
@@ -127,40 +117,7 @@ print(s)
 50      Marathi
 dtype: object
 print(s[0])
-Traceback (most recent call last):
-  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexes\base.py", line 3802, in get_loc
-    return self._engine.get_loc(casted_key)
-  File "pandas\_libs\index.pyx", line 138, in pandas._libs.index.IndexEngine.get_loc
-  File "pandas\_libs\index.pyx", line 165, in pandas._libs.index.IndexEngine.get_loc
-  File "pandas\_libs\hashtable_class_helper.pxi", line 2263, in pandas._libs.hashtable.Int64HashTable.get_item
-  File "pandas\_libs\hashtable_class_helper.pxi", line 2273, in pandas._libs.hashtable.Int64HashTable.get_item
-KeyError: 0
 
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "<pyshell#40>", line 1, in <module>
-    print(s[0])
-  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\series.py", line 981, in __getitem__
-    return self._get_value(key)
-  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\series.py", line 1089, in _get_value
-    loc = self.index.get_loc(label)
-  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexes\base.py", line 3804, in get_loc
-    raise KeyError(key) from err
-KeyError: 0
-print(s[10])
-Maths
-print(s[10,20])
-Traceback (most recent call last):
-  File "<pyshell#42>", line 1, in <module>
-    print(s[10,20])
-  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\series.py", line 1007, in __getitem__
-    return self._get_with(key)
-  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\series.py", line 1022, in _get_with
-    return self._get_values_tuple(key)
-  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\series.py", line 1060, in _get_values_tuple
-    raise KeyError("key of type tuple not found and not a MultiIndex")
-KeyError: 'key of type tuple not found and not a MultiIndex'
 print(s[[10,20]])
 10      Maths
 20    Science
@@ -178,40 +135,6 @@ print(s)
 50      Marathi
 dtype: object
 s[10,20]="Economy","Zoology"
-Traceback (most recent call last):
-  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexes\base.py", line 3802, in get_loc
-    return self._engine.get_loc(casted_key)
-  File "pandas\_libs\index.pyx", line 138, in pandas._libs.index.IndexEngine.get_loc
-  File "pandas\_libs\index.pyx", line 146, in pandas._libs.index.IndexEngine.get_loc
-  File "pandas\_libs\index_class_helper.pxi", line 49, in pandas._libs.index.Int64Engine._check_type
-KeyError: (10, 20)
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\series.py", line 1105, in __setitem__
-    self._set_with_engine(key, value)
-  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\series.py", line 1175, in _set_with_engine
-    loc = self.index.get_loc(key)
-  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexes\base.py", line 3804, in get_loc
-    raise KeyError(key) from err
-KeyError: (10, 20)
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "<pyshell#48>", line 1, in <module>
-    s[10,20]="Economy","Zoology"
-  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\series.py", line 1127, in __setitem__
-    self.loc[key] = value
-  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexing.py", line 814, in __setitem__
-    indexer = self._get_setitem_indexer(key)
-  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexing.py", line 703, in _get_setitem_indexer
-    return self._convert_to_indexer(key, axis=0)
-  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\pandas\core\indexing.py", line 1359, in _convert_to_indexer
-    raise IndexingError("Too many indexers")
-pandas.errors.IndexingError: Too many indexers
-
 
 
 l=[10,20,30,40]
