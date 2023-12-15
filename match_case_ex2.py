@@ -1,5 +1,6 @@
+# Program for Implementing Arithmetic Operations by using Menu driven with match case statement
 print("*"*50)
-print("\tArithmatic Calculator")
+print("\tArithmatic Calculator for Different operations on Two Numbers")
 print("*"*50)
 print("\t1.Addition")
 print("\t2.Substraction")
